@@ -16,7 +16,7 @@
 `const [setSelectedIndex, selectedIndex] = useState();`
 
 **-> Passing a number selectedIndex to isSelected which should be a bool.**
-
+```
 <ul style={{ textAlign: "left" }}>
        {items.map((item, index) => (
         <SingleListItem
@@ -27,13 +27,15 @@
         />
       ))}
 </ul>
--> Defining a default prop as null is not recommended.
-
+```
+**-> Defining a default prop as null is not recommended.**
+```
 WrappedListComponent.defaultProps = {
   items: null,
 };
--> Unique key prop is missing for List items.
-
+```
+**-> Unique key prop is missing for List items.**
+```
 <ul style={{ textAlign: 'left' }}>
       {items.map((item, index) => (
         <SingleListItem
@@ -44,8 +46,9 @@ WrappedListComponent.defaultProps = {
         />
       ))}
 </ul>
--> Syntax errors in the following code
-
+```
+**-> Syntax errors in the following code**
+```
 WrappedListComponent.propTypes = {
   items: PropTypes.array(
     PropTypes.shapeOf({
@@ -53,8 +56,9 @@ WrappedListComponent.propTypes = {
     })
   ),
 };
-3. Please fix, optimize, and/or modify the component as much as you think is necessary.
-
+```
+**3. Please fix, optimize, and/or modify the component as much as you think is necessary.**
+```
 import React, { useState, useEffect, memo } from 'react';
 import PropTypes from 'prop-types';
 
@@ -138,3 +142,4 @@ WrappedListComponent.defaultProps = {
 const List = memo(WrappedListComponent);
 
 export default List;
+```
